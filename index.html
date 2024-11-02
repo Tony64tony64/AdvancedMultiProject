@@ -10,9 +10,9 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
-      background-color: #e0f7fa; /* Changed background color */
+      background-color: #e0f7fa; 
       margin: 0;
-      font-family: 'Helvetica Neue', sans-serif; /* Changed font */
+      font-family: 'Helvetica Neue', sans-serif;
     }
     .controls {
       position: absolute;
@@ -20,12 +20,12 @@
       left: 20px;
       background: #ffffff;
       padding: 20px;
-      border: 2px solid #00796b; /* Added border */
+      border: 2px solid #00796b; 
       border-radius: 10px;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     }
     canvas {
-      border: 2px solid #b2ebf2; /* Changed border color */
+      border: 2px solid #b2ebf2; 
       background-color: #ffffff;
     }
     button {
@@ -33,12 +33,12 @@
       padding: 10px;
       border: none;
       border-radius: 5px;
-      background-color: #00796b; /* Button color */
+      background-color: #00796b; 
       color: white;
       cursor: pointer;
     }
     button:hover {
-      background-color: #004d40; /* Button hover color */
+      background-color: #004d40; 
     }
   </style>
 </head>
@@ -56,7 +56,7 @@
     </select>
   </label>
   <br><br>
-  <label>Pick a Color: <input type="color" id="colorPicker" value="#ff5722"></label> <!-- Changed default color -->
+  <label>Pick a Color: <input type="color" id="colorPicker" value="#ff5722"></label> 
   <br><br>
   <button id="drawShape">Draw</button>
   <button id="clearCanvas">Clear</button>
@@ -75,7 +75,7 @@
 
   function drawCircle(color) {
     ctx.beginPath();
-    ctx.arc(400, 300, 80, 0, Math.PI * 2); // Changed radius
+    ctx.arc(400, 300, 80, 0, Math.PI * 2); 
     ctx.fillStyle = color;
     ctx.fill();
     ctx.closePath();
@@ -84,7 +84,7 @@
 
   function drawRectangle(color) {
     ctx.fillStyle = color;
-    ctx.fillRect(250, 200, 300, 200); // Changed position
+    ctx.fillRect(250, 200, 300, 200); 
   }
 
  
@@ -125,7 +125,7 @@
     const selectedShape = shapeSelect.value;
     const color = colorPicker.value;
 
-    ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas before drawing
+    ctx.clearRect(0, 0, canvas.width, canvas.height); 
 
     switch (selectedShape) {
       case 'circle':
